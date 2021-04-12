@@ -23,27 +23,27 @@
 typedef enum
     /* book-keeping tokens*/
     {ENDFILE,ERROR,
-    //reserved words
+    /*reserved words*/
     IF,THEN,ELSE,END,REPEAT,UNTIL,READ,WRITE,
-    //multicharacter tokens
+    /*multicharacter tokens*/
     ID,NUM,
-    //special symbols
+    /*special symbols*/
     ASSIGN,EQ,LT,PLUS,MINUS,TIMES,OVER,LPAREN,RPAREN,SEMI
     }TokenType;
 
-extern FILE* source;    //source code text file
-extern FILE* listing;   //listing output text file
-extern FILE* code;      //code text file for TM simulator
+extern FILE* source;    /*source code text file*/
+extern FILE* listing;   /*listing output text file*/
+extern FILE* code;      /*code text file for TM simulator*/
 
-extern int lineno;  //source line number for listing
+extern int lineno;  /*source line number for listing*/
 
-//  SYNTAX TREE FOR PARSING
+/*  SYNTAX TREE FOR PARSING */
 
 typedef enum {StmtK,ExpK} NodeKind;
 typedef enum {IfK,RepeatK,AssignK,ReadK,WriteK} StmtKind;
 typedef enum {OpK,ConstK,IdK} ExpKind;
 
-// ExpType is used for type checking
+/* ExpType is used for type checking    */
 typedef enum {Void,Integer,Boolean} ExpType;
 
 #define MAXCHILDREN 3
@@ -58,7 +58,7 @@ typedef struct treeNode{
     ExpType type; 
 } TreeNode;
 
-//  FLAGS FOR TRACING
+/*  FLAGS FOR TRACING   */
 
 /* EchoSource = TRUE causes the source program to
 be echoed to the listing file with line numbers
