@@ -52,7 +52,7 @@ typedef struct treeNode{
     struct treeNode* child[MAXCHILDREN];
     struct treeNode* sibling;
     int lineno;
-    NodeKind nodeking;
+    NodeKind nodekind;
     union {StmtKind stmt; ExpKind exp;} kind;
     union {TokenType op; int val; char* name;} attr;
     ExpType type; 
