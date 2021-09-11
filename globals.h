@@ -1,4 +1,5 @@
-/*  Global types and vars for Tiny Compiler must
+/* Author:Aadi
+ * Global types and vars for Tiny Compiler must
     come before other include files */
 
 #ifndef _GLOBALS_H_
