@@ -53,8 +53,19 @@ main( int argc, char * argv[] )
 		fprintf(stderr,"usage: %s <filename>\n",pgm);
 		exit(1);
 	}
-	
 
+	strcpy(pgm,argv[1]);
+	if(strchr(pgm, '.') == NULL)
+		strcat(pgm,".tny");
+	source == fopen(pgm,"r");
+	if(source == NULL)
+	{
+		fprintf(stderr,"File %s not found\n",pgm);
+		exit(1);
+	}
+	listing = stdout; /* send listing to screen */
+	fprintf(listing,"\n TINY COMPILATION: %s\n",pgm);
+}
 
 
 
