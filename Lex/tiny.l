@@ -45,7 +45,7 @@ whitespace  [ \t]+
                     if(c == '\n') lineno++;
                 }while(c != '}');
             }
-            {return ERROR;}
+.           {return ERROR;}
 
 %%
 

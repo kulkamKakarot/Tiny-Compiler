@@ -53,6 +53,7 @@ main( int argc, char * argv[] )
 		fprintf(stderr,"usage: %s <filename>\n",pgm);
 		exit(1);
 	}
+<<<<<<< HEAD
 	strcpy(pgm,argv[1]);
 	if(strchr(pgm,'.') == NULL )
 		strcat(pgm,".tny");
@@ -63,6 +64,32 @@ main( int argc, char * argv[] )
 	}
 	listing = stdout; /* send listing to  screen */
 	fprintf(listing,"\n TINY COMPILATION: %s\n",pgm);
+=======
+
+	strcpy(pgm,argv[1]);
+	if(strchr(pgm, '.') == NULL)
+		strcat(pgm,".tny");
+	source == fopen(pgm,"r");
+	if(source == NULL)
+	{
+		fprintf(stderr,"File %s not found\n",pgm);
+		exit(1);
+	}
+	listing = stdout; /* send listing to screen */
+	fprintf(listing,"\n TINY COMPILATION: %s\n",pgm);
+}
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> c196bd4b3c6ff6ca825570ba6706bcc67daa57ec
 
 #if NO_PARSE
 	while (getToken() != ENDFILE);
